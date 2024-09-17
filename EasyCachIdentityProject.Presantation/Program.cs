@@ -18,6 +18,9 @@ builder.Services.AddScoped<ICustomerAccountProcessService,CustomerAccountProcess
 
 builder.Services.AddScoped<ICustomerAccountDal, EfCustomerAccountDal>();
 builder.Services.AddScoped<ICustomerAccountService, CustomerAccountManager>();
+
+builder.Services.AddScoped<IExchangeRateDal, EfExchangeRateDal>();
+builder.Services.AddScoped<IExchangeRateService, ExchangeRateManager>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

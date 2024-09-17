@@ -18,6 +18,7 @@ namespace EasyCachIdentityProject.DataAccessLayer.Concrete
         public DbSet<CustomerAccount> CustomerAccounts { get; set; }
         public DbSet<CustomerAccountProcess> CustomerAccountsProcesses { get; set; }
         public DbSet<ElectricBill> ElectricBills { get; set; }
+        public DbSet<ExchangeRate> ExchangeRates { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

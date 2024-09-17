@@ -246,6 +246,43 @@ namespace EasyCachIdentityProject.DataAccessLayer.Migrations
                     b.ToTable("ElectricBills");
                 });
 
+            modelBuilder.Entity("EasyCachIdentityProject.EntityLayer.Concrete.ExchangeRate", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<decimal>("BanknoteBuying")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("BanknoteSelling")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("CurrencyCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CurrencyName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("ForexBuying")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("ForexSelling")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Isim")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Unit")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ExchangeRates");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
                     b.Property<int>("Id")
